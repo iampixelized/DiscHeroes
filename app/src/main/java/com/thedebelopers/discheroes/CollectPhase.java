@@ -105,7 +105,7 @@ public class CollectPhase extends AppCompatActivity {
         Random random1; //shufflebag starts
         random1 = new Random();
 
-
+//ShuffleBag START
         for (int i = 0; i < y; i++)
         {
             // NextDouble returns a random number between 0 and 1.
@@ -115,6 +115,7 @@ public class CollectPhase extends AppCompatActivity {
             s[r] = s[i];
             s[i] = t;
         }
+////ShuffleBag FINISH
 
         //shufflebag ends
 
