@@ -22,7 +22,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.Random;
 
@@ -221,59 +220,28 @@ public class CollectPhase extends AppCompatActivity {
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                sv1[svc1]= Arrays.toString(err1);
+                                sv1[svc1]= err1.toString();
 
-                                try {
-                                    JSONObject obj = new JSONObject(loadJSONFromAsset());
-                                    JSONArray m_jArry = obj.getJSONArray("monster");
-
-                                    for (int i = 0; i < m_jArry.length(); i++) {
-                                        JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id");
-                                        String name_value = jo_inside.get("name").toString();
-
-                                        if (Objects.equals(id_value, sv1[svc1])){
-                                            nholder = name_value;
-                                        }
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
+                                nholder=sv1[svc1];
 
                                 svc1++;
                                 ad.setText("saved: "+svc1);
 
-                                ah.setText("Hit! You saved a "+nholder+"\nEnemy's turn");
+                                ah.setText("Hit! You saved a "+sv1[svc1]+"\nEnemy's turn");
                             }
 
                             if(err[0]=='2'){
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                cp1[cpc1]= Arrays.toString(err1);
+                                cp1[cpc1]= err1.toString();
 
-
-                                try {
-                                    JSONObject obj = new JSONObject(loadJSONFromAsset());
-                                    JSONArray m_jArry = obj.getJSONArray("monster");
-
-                                    for (int i = 0; i < m_jArry.length(); i++) {
-                                        JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id");
-                                        String name_value = jo_inside.get("name").toString();
-
-                                        if (Objects.equals(id_value, cp1[cpc1])){
-                                            nholder = name_value;
-                                        }
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
+                                nholder = cp1[cpc1];
 
                                 cpc1++;
                                 af.setText("captured: "+cpc1);
 
-                                ah.setText("Hit! You captured a "+ nholder +"\nEnemy's turn");
+                                ah.setText("Hit! You captured a "+ cp1[cpc1] +"\nEnemy's turn");
                             }
 
                             th++;
@@ -297,58 +265,28 @@ public class CollectPhase extends AppCompatActivity {
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                sv1[svc1]= Arrays.toString(err1);
+                                sv1[svc1]= err1.toString();
 
-                                try {
-                                    JSONObject obj = new JSONObject(loadJSONFromAsset());
-                                    JSONArray m_jArry = obj.getJSONArray("monster");
-
-                                    for (int i = 0; i < m_jArry.length(); i++) {
-                                        JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id");
-                                        String name_value = jo_inside.get("name").toString();
-
-                                        if (Objects.equals(id_value, sv1[svc1])){
-                                            nholder = name_value;
-                                        }
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
+                                nholder = sv1[svc1];
 
                                 svc1++;
                                 ad.setText("saved: "+svc1);
 
-                                ah.setText("Hit! You saved a "+nholder+"\nEnemy's turn");
+                                ah.setText("Hit! You saved a "+sv1[svc1]+"\nEnemy's turn");
                             }
 
                             if(err[0]=='2'){
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                cp1[cpc1]= Arrays.toString(err1);
+                                cp1[cpc1]= err1.toString();
 
-                                try {
-                                    JSONObject obj = new JSONObject(loadJSONFromAsset());
-                                    JSONArray m_jArry = obj.getJSONArray("monster");
-
-                                    for (int i = 0; i < m_jArry.length(); i++) {
-                                        JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id");
-                                        String name_value = jo_inside.get("name").toString();
-
-                                        if (Objects.equals(id_value, cp1[cpc1])){
-                                            nholder = name_value;
-                                        }
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
+                                nholder = cp1[cpc1];
 
                                 cpc1++;
                                 af.setText("captured: "+cpc1);
 
-                                ah.setText("Hit! You captured a "+nholder+"\nEnemy's turn");
+                                ah.setText("Hit! You captured a "+cp1[cpc1]+"\nEnemy's turn");
                             }
 
                             th++;
@@ -368,7 +306,7 @@ public class CollectPhase extends AppCompatActivity {
 
                         }
 
-                        Thread.sleep(100);
+                        seekBarThread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
