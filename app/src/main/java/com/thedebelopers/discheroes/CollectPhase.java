@@ -1,8 +1,10 @@
 package com.thedebelopers.discheroes;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -20,6 +22,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 
 public class CollectPhase extends AppCompatActivity {
@@ -192,6 +196,7 @@ public class CollectPhase extends AppCompatActivity {
         final Intent baph = new Intent(this, BattlePhase.class);
         pogstack = findViewById(R.id.stack);
         pogstack.setOnTouchListener(new View.OnTouchListener() {
+            @TargetApi(Build.VERSION_CODES.KITKAT)
             public boolean onTouch(View v, MotionEvent evt) {
                 if ((evt.getAction() == MotionEvent.ACTION_DOWN)) {
                     try {
@@ -216,9 +221,7 @@ public class CollectPhase extends AppCompatActivity {
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                sv1[svc1]= err1.toString();
-                                svc1++;
-                                ad.setText("saved: "+svc1);
+                                sv1[svc1]= Arrays.toString(err1);
 
                                 try {
                                     JSONObject obj = new JSONObject(loadJSONFromAsset());
@@ -226,16 +229,19 @@ public class CollectPhase extends AppCompatActivity {
 
                                     for (int i = 0; i < m_jArry.length(); i++) {
                                         JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id").toString();
+                                        String id_value = jo_inside.getString("id");
                                         String name_value = jo_inside.get("name").toString();
 
-                                        if (id_value == err1.toString()){
+                                        if (Objects.equals(id_value, sv1[svc1])){
                                             nholder = name_value;
                                         }
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
+
+                                svc1++;
+                                ad.setText("saved: "+svc1);
 
                                 ah.setText("Hit! You saved a "+nholder+"\nEnemy's turn");
                             }
@@ -244,9 +250,8 @@ public class CollectPhase extends AppCompatActivity {
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                cp1[cpc1]= err1.toString();
-                                cpc1++;
-                                af.setText("captured: "+cpc1);
+                                cp1[cpc1]= Arrays.toString(err1);
+
 
                                 try {
                                     JSONObject obj = new JSONObject(loadJSONFromAsset());
@@ -254,10 +259,10 @@ public class CollectPhase extends AppCompatActivity {
 
                                     for (int i = 0; i < m_jArry.length(); i++) {
                                         JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id").toString();
+                                        String id_value = jo_inside.getString("id");
                                         String name_value = jo_inside.get("name").toString();
 
-                                        if (id_value == err1.toString()){
+                                        if (Objects.equals(id_value, cp1[cpc1])){
                                             nholder = name_value;
                                         }
                                     }
@@ -265,7 +270,10 @@ public class CollectPhase extends AppCompatActivity {
                                     e.printStackTrace();
                                 }
 
-                                ah.setText("Hit! You captured a "+"\nEnemy's turn");
+                                cpc1++;
+                                af.setText("captured: "+cpc1);
+
+                                ah.setText("Hit! You captured a "+ nholder +"\nEnemy's turn");
                             }
 
                             th++;
@@ -289,9 +297,7 @@ public class CollectPhase extends AppCompatActivity {
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                sv1[svc1]= err1.toString();
-                                svc1++;
-                                ad.setText("saved: "+svc1);
+                                sv1[svc1]= Arrays.toString(err1);
 
                                 try {
                                     JSONObject obj = new JSONObject(loadJSONFromAsset());
@@ -299,16 +305,19 @@ public class CollectPhase extends AppCompatActivity {
 
                                     for (int i = 0; i < m_jArry.length(); i++) {
                                         JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id").toString();
+                                        String id_value = jo_inside.getString("id");
                                         String name_value = jo_inside.get("name").toString();
 
-                                        if (id_value == err1.toString()){
+                                        if (Objects.equals(id_value, sv1[svc1])){
                                             nholder = name_value;
                                         }
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
+
+                                svc1++;
+                                ad.setText("saved: "+svc1);
 
                                 ah.setText("Hit! You saved a "+nholder+"\nEnemy's turn");
                             }
@@ -317,9 +326,7 @@ public class CollectPhase extends AppCompatActivity {
                                 for(int i = 1; i < err.length; i++){
                                     err1[i-1]=err[i];
                                 }
-                                cp1[cpc1]= err1.toString();
-                                cpc1++;
-                                af.setText("captured: "+cpc1);
+                                cp1[cpc1]= Arrays.toString(err1);
 
                                 try {
                                     JSONObject obj = new JSONObject(loadJSONFromAsset());
@@ -327,16 +334,19 @@ public class CollectPhase extends AppCompatActivity {
 
                                     for (int i = 0; i < m_jArry.length(); i++) {
                                         JSONObject jo_inside = m_jArry.getJSONObject(i);
-                                        String id_value = jo_inside.getString("id").toString();
+                                        String id_value = jo_inside.getString("id");
                                         String name_value = jo_inside.get("name").toString();
 
-                                        if (id_value == err1.toString()){
+                                        if (Objects.equals(id_value, cp1[cpc1])){
                                             nholder = name_value;
                                         }
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
+
+                                cpc1++;
+                                af.setText("captured: "+cpc1);
 
                                 ah.setText("Hit! You captured a "+nholder+"\nEnemy's turn");
                             }
@@ -358,7 +368,7 @@ public class CollectPhase extends AppCompatActivity {
 
                         }
 
-                        seekBarThread.sleep(100);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
