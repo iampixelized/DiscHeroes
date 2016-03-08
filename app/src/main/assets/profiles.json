@@ -1,0 +1,314 @@
+{
+  "profile":[
+	{
+	  "id": 1,
+	  "name": "Test",
+	  "save": 1,
+	  "gold": 1000,
+	  "chapter": 0,
+	  "team":{
+		"hero": "pog1",
+		"slot1": "pog1",
+		"slot2": "",
+		"slot3": "",
+		"slot4": "",
+		"slot5": "",
+		"slot6": "",
+		"slot7": "",
+		"slot8": "",
+		"slot9": "",
+		"slot10": ""
+	  },
+	  "inventory": {
+		"pog1": 2,
+		"pog2": 0,
+		"pog3": 0,
+		"pog4": 0,
+		"pog5": 0,
+		"pog6": 0,
+		"pog7": 0,
+		"pog8": 0,
+		"pog9": 0,
+		"pog10": 0,
+		"pog11": 0,
+		"pog12": 0,
+		"pog13": 0,
+		"pog14": 0,
+		"pog15": 0,
+		"pog16": 0,
+		"pog17": 0,
+		"pog18": 0,
+		"pog19": 0,
+		"pog20": 0,
+		"pog21": 0
+	  }
+	},
+
+	{
+	  "id": 2,
+	  "name": "",
+	  "save": 0,
+	  "gold": 0,
+	  "chapter": 0,
+	  "team":{
+		"hero": "",
+		"slot1": "",
+		"slot2": "",
+		"slot3": "",
+		"slot4": "",
+		"slot5": "",
+		"slot6": "",
+		"slot7": "",
+		"slot8": "",
+		"slot9": "",
+		"slot10": ""
+	  },
+	  "inventory": {
+		"pog1": 0,
+		"pog2": 0,
+		"pog3": 0,
+		"pog4": 0,
+		"pog5": 0,
+		"pog6": 0,
+		"pog7": 0,
+		"pog8": 0,
+		"pog9": 0,
+		"pog10": 0,
+		"pog11": 0,
+		"pog12": 0,
+		"pog13": 0,
+		"pog14": 0,
+		"pog15": 0,
+		"pog16": 0,
+		"pog17": 0,
+		"pog18": 0,
+		"pog19": 0,
+		"pog20": 0,
+		"pog21": 0
+	  }
+	}
+  ],
+
+
+  "monster": [
+	{
+	  "id": "pog0",
+	  "name": "Dummie",
+	  "hp": 10,
+	  "attack": 0,
+	  "defense": 0,
+	  "speed": 0,
+	  "ability": "sh3"
+	},
+
+	{
+	  "id": "pog1",
+	  "name": "Flameling",
+	  "hp": 20,
+	  "attack": 5,
+	  "defense": 3,
+	  "speed": 3,
+	  "ability": "eh3"
+	},
+
+	{
+	  "id": "pog2",
+	  "name": "Blazelet",
+	  "hp": 30,
+	  "attack": 8,
+	  "defense": 5,
+	  "speed": 8,
+	  "ability": "sh3"
+	},
+
+	{
+	  "id": "pog3",
+	  "name": "Blazekrieg",
+	  "hp": 53,
+	  "attack": 14,
+	  "defense": 9,
+	  "speed": 14,
+	  "ability": "sa3"
+	},
+
+	{
+	  "id": "pog4",
+	  "name": "Mushbro",
+	  "hp": 21,
+	  "attack": 4,
+	  "defense": 4,
+	  "speed": 3,
+	  "ability": "sd1"
+	},
+
+	{
+	  "id": "pog5",
+	  "name": "Mushbrad",
+	  "hp": 32,
+	  "attack": 6,
+	  "defense": 6,
+	  "speed": 5,
+	  "ability": "sd2"
+	},
+
+	{
+	  "id": "pog6",
+	  "name": "Mushboss",
+	  "hp": 56,
+	  "attack": 11,
+	  "defense": 11,
+	  "speed": 9,
+	  "ability": "sd3"
+	},
+
+	{
+	  "id": "pog7",
+	  "name": "Sparkie",
+	  "hp": 19,
+	  "attack": 6,
+	  "defense": 3,
+	  "speed": 7,
+	  "ability": "sa1"
+	},
+
+	{
+	  "id": "pog8",
+	  "name": "Sparkchop",
+	  "hp": 29,
+	  "attack": 9,
+	  "defense": 5,
+	  "speed": 21,
+	  "ability": "sa2"
+	},
+
+	{
+	  "id": "pog9",
+	  "name": "Hampere",
+	  "hp": 52,
+	  "attack": 16,
+	  "defense": 9,
+	  "speed": 19,
+	  "ability": "sa3"
+	},
+
+	{
+	  "id": "pog10",
+	  "name": "Leafle",
+	  "hp": 22,
+	  "attack": 5,
+	  "defense": 3,
+	  "speed": 4,
+	  "ability": "ed1"
+	},
+
+	{
+	  "id": "pog11",
+	  "name": "Seedshell",
+	  "hp": 33,
+	  "attack": 8,
+	  "defense": 5,
+	  "speed": 6,
+	  "ability": "ed2"
+	},
+
+	{
+	  "id": "pog12",
+	  "name": "Seedwing",
+	  "hp": 58,
+	  "attack": 14,
+	  "defense": 9,
+	  "speed": 11,
+	  "ability": "ed3"
+	},
+
+	{
+	  "id": "pog13",
+	  "name": "Driplet",
+	  "hp": 21,
+	  "attack": 4,
+	  "defense": 3,
+	  "speed": 4,
+	  "ability": "sh1"
+	},
+
+	{
+	  "id": "pog14",
+	  "name": "Angii",
+	  "hp": 32,
+	  "attack": 6,
+	  "defense": 5,
+	  "speed": 6,
+	  "ability": "sh2"
+	},
+
+	{
+	  "id": "pog15",
+	  "name": "Guitai",
+	  "hp": 56,
+	  "attack": 11,
+	  "defense": 9,
+	  "speed": 11,
+	  "ability": "sh3"
+	},
+
+	{
+	  "id": "pog16",
+	  "name": "Footle",
+	  "hp": 19,
+	  "attack": 5,
+	  "defense": 3,
+	  "speed": 6,
+	  "ability": "ea1"
+	},
+
+	{
+	  "id": "pog17",
+	  "name": "Toursle",
+	  "hp": 29,
+	  "attack": 8,
+	  "defense": 5,
+	  "speed": 9,
+	  "ability": "ea2"
+	},
+
+	{
+	  "id": "pog18",
+	  "name": "Manangle",
+	  "hp": 51,
+	  "attack": 14,
+	  "defense": 9,
+	  "speed": 16,
+	  "ability": "ea3"
+	},
+
+	{
+	  "id": "pog19",
+	  "name": "Shidden",
+	  "hp": 18,
+	  "attack": 7,
+	  "defense": 2,
+	  "speed": 5,
+	  "ability": "eh1"
+	},
+
+	{
+	  "id": "pog20",
+	  "name": "Nyadow",
+	  "hp": 27,
+	  "attack": 11,
+	  "defense": 3,
+	  "speed": 8,
+	  "ability": "eh2"
+	},
+
+	{
+	  "id": "pog21",
+	  "name": "Klatzinoir",
+	  "hp": 47,
+	  "attack": 19,
+	  "defense": 5,
+	  "speed": 14,
+	  "ability": "eh3"
+	}
+  ]
+}

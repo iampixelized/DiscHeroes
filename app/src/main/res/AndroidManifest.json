@@ -1,0 +1,22 @@
+{
+	"Profiles" :[
+	{
+		"id": "01",
+		"name": "None",
+		"gold": "0",
+		"chapter": "1",
+		"pog001" : "0"
+	
+	},
+	{
+		"id": "02",
+		"name": "None",
+		"gold": "0",
+		"chapter": "1",
+		"pog001": "0"
+	
+	}
+
+
+	
+}

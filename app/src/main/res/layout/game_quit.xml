@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#00ffffff">
+
+    <TextView
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Are you sure you want to quit?"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_x="206dp"
+        android:layout_y="119dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:text="@string/yeah"
+        android:id="@+id/confirm"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:onClick="bye"
+        android:layout_x="210dp"
+        android:layout_y="168dp"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/deny"
+        android:layout_toStartOf="@+id/deny" />
+
+    <Button
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:text="Nope"
+        android:id="@+id/deny"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:nestedScrollingEnabled="false"
+        android:onClick="back"
+        android:layout_x="316dp"
+        android:layout_y="168dp"
+        android:layout_alignTop="@+id/confirm"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+</RelativeLayout>

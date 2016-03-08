@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.thedebelopers.discheroes.Gallery"
+    android:background="@drawable/bg_book">
+
+    <Button
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:text="Previous"
+        android:id="@+id/previous"
+        android:layout_x="20dp"
+        android:layout_y="267dp"
+        android:background="@drawable/button"
+        android:onClick="p"
+        android:visibility="invisible"
+        android:clickable="false" />
+
+    <Button
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:text="Next"
+        android:id="@+id/next"
+        android:layout_x="170dp"
+        android:layout_y="267dp"
+        android:background="@drawable/button"
+        android:onClick="n" />
+
+    <Button
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:text="Back"
+        android:id="@+id/back"
+        android:layout_x="473dp"
+        android:layout_y="267dp"
+        android:background="@drawable/button"
+        android:onClick="b" />
+
+    <RelativeLayout
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_x="40dp"
+        android:layout_y="33dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spriteView"
+            android:layout_x="55dp"
+            android:layout_y="42dp"
+            android:cropToPadding="false"
+            android:baselineAlignBottom="false"
+            android:adjustViewBounds="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sprite001"
+            android:scaleX="1"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="38dp"
+        android:text="001 - FLAMELING"
+        android:id="@+id/nameView"
+        android:layout_x="327dp"
+        android:layout_y="28dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="51dp"
+        android:text="hp: 20   atk: 5   def: 3   spd: 5\nability: enemy&apos;s hp -10"
+        android:id="@+id/statView"
+        android:layout_x="327dp"
+        android:layout_y="76dp"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="135dp"
+        android:text="Flamelings live in nearby swamps deep in forests."
+        android:id="@+id/triviaView"
+        android:layout_x="327dp"
+        android:layout_y="130dp"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+</AbsoluteLayout>
