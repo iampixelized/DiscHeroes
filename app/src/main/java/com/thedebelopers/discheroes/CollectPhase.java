@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -25,8 +24,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Objects;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class CollectPhase extends AppCompatActivity {
     int c = StoryMenu.nosepick;
@@ -48,7 +45,6 @@ public class CollectPhase extends AppCompatActivity {
     String nholder;
     static int staku;
     public static int hey=0;
-    Button gitna = (Button) findViewById(R.id.stack);
 
     public String loadJSONFromAsset() {
         String json = null;
@@ -212,135 +208,9 @@ public class CollectPhase extends AppCompatActivity {
                         //setProgress 84 to 100 green
 
 
-////Missed
                         if(seekBar.getProgress()<40){
+
                             ah.setText("Missed!\nEnemy's turn");
-
-                            final Handler handler = new Handler();
-                            Timer t = new Timer();
-                            t.schedule(new TimerTask() {
-                                public void run() {
-                                    handler.post(new Runnable() {
-                                        public void run() {/*
-
-
-                                            if(seekBar.getProgress()<40){
-                                                ah.setText("Missed!\nEnemy's turn");
-
-                                                final Handler handler = new Handler();
-                                                Timer t = new Timer();
-                                                t.schedule(new TimerTask() {
-                                                    public void run() {
-                                                        handler.post(new Runnable() {
-                                                            public void run() {
-
-
-                                                            }
-                                                        });
-                                                    }
-                                                }, 2000);
-
-                                            }
-                                            if(seekBar.getProgress()>39&&seekBar.getProgress()<84){
-                                                String lett = s[th];
-                                                char [] err = lett.toCharArray();
-                                                char [] err1 = new char[err.length-1];
-                                                if(err[0]=='1'){
-                                                    for(int i = 1; i < err.length; i++){
-                                                        err1[i-1]=err[i];
-                                                    }
-                                                    sv1[svc1]= err1.toString();
-
-                                                    nholder=sv1[svc1];
-
-                                                    svc1++;
-                                                    ad.setText("saved: "+svc1);
-
-                                                    ah.setText("Hit! You saved a "+sv1[svc1]+"\nEnemy's turn");
-                                                }
-
-                                                if(err[0]=='2'){
-                                                    for(int i = 1; i < err.length; i++){
-                                                        err1[i-1]=err[i];
-                                                    }
-                                                    cp1[cpc1]= err1.toString();
-
-                                                    nholder = cp1[cpc1];
-
-                                                    cpc1++;
-                                                    af.setText("captured: "+cpc1);
-
-                                                    ah.setText("Hit! You captured a "+ cp1[cpc1] +"\nEnemy's turn");
-                                                }
-
-                                                th++;
-                                                staku--;
-                                                if (staku==0){
-                                                    startActivity(baph);
-                                                }
-                                                if (staku==1){
-                                                    ac.setText(staku + " POG left");
-                                                }
-                                                if (staku>1){
-                                                    ac.setText(staku + " POGs left");
-                                                }
-
-                                            }
-                                            if(seekBar.getProgress()>83){
-                                                String lett = s[th];
-                                                char [] err = lett.toCharArray();
-                                                char [] err1 = new char[err.length-1];
-                                                if(err[0]=='1'){
-                                                    for(int i = 1; i < err.length; i++){
-                                                        err1[i-1]=err[i];
-                                                    }
-                                                    sv1[svc1]= err1.toString();
-
-                                                    nholder = sv1[svc1];
-
-                                                    svc1++;
-                                                    ad.setText("saved: "+svc1);
-
-                                                    ah.setText("Hit! You saved a "+sv1[svc1]+"\nEnemy's turn");
-                                                }
-
-                                                if(err[0]=='2'){
-                                                    for(int i = 1; i < err.length; i++){
-                                                        err1[i-1]=err[i];
-                                                    }
-                                                    cp1[cpc1]= err1.toString();
-
-                                                    nholder = cp1[cpc1];
-
-                                                    cpc1++;
-                                                    af.setText("captured: "+cpc1);
-
-                                                    ah.setText("Hit! You captured a "+cp1[cpc1]+"\nEnemy's turn");
-                                                }
-
-                                                th++;
-                                                staku--;
-                                                if (staku==0){
-                                                    startActivity(baph);
-                                                }
-                                                if (staku==1){
-                                                    ac.setText(staku+" POG left");
-                                                }
-                                                if (staku>1){
-                                                    ac.setText(staku+" POGs left");
-                                                }
-
-                                            }
-
-
-                                            */
-                                        }
-                                    });
-                                }
-                            }, 2000);
-
-
-////Hit
                         }
                         if(seekBar.getProgress()>39&&seekBar.getProgress()<84){
                             String lett = s[th];
@@ -387,9 +257,6 @@ public class CollectPhase extends AppCompatActivity {
                             }
 
                         }
-
-
-////slam
                         if(seekBar.getProgress()>83){
                             String lett = s[th];
                             char [] err = lett.toCharArray();
@@ -423,12 +290,15 @@ public class CollectPhase extends AppCompatActivity {
                             }
 
                             th++;
+
                             staku--;
+
                             if (staku==0){
                                 startActivity(baph);
                             }
                             if (staku==1){
                                 ac.setText(staku+" POG left");
+
                             }
                             if (staku>1){
                                 ac.setText(staku+" POGs left");
@@ -436,9 +306,6 @@ public class CollectPhase extends AppCompatActivity {
 
                         }
 
-
-
-////end chuchu
                         seekBarThread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
